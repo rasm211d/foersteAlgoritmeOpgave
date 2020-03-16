@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-
 public class Main {
     static int[] data1 = {5, 7, 1, 20, 50, 10, 15, 9, 41, 8, 61};
     static int[] data2 = {5, 7, 1, 5, 2, 5, 15, 5, 41, 2, 61};
@@ -10,6 +8,13 @@ public class Main {
         find(10);
         findAlle(5);
         findMax();
+        System.out.println();
+
+        //Implementering af bubblesort
+        bubbleSort(data1);
+        for (int i = 0; i < data1.length; i++) {
+            System.out.println(data1[i]);
+        }
     }
 
     public static boolean find(int x) {
@@ -61,6 +66,21 @@ public class Main {
         }
 
     }*/
+    public static void bubbleSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 1; j < array.length - i; j++) {
+                if (array[j - 1] > array[j]) {
+                    swap(array, j, j - 1);
+                }
+            }
+        }
+    }
+
+    private static void swap(int[] array, int a, int b) {
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
 
 
 }
