@@ -1,6 +1,6 @@
 public class Main {
     static int[] data1 = {5, 7, 1, 20, 50, 10, 15, 9, 41, 8, 61};
-    static int[] data2 = {5, 7, 1, 5, 2, 5, 15, 5, 41, 2, 61};
+    static int[] data2 = {5, 7, 1, 20, 50, 10, 15, 9, 41, 8, 61};
     static int[] data3 = {5, 7, 10, 5, 2, 5, 15, 5, 41, 2, 61};
     static int[] data4 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
@@ -14,6 +14,12 @@ public class Main {
         bubbleSort(data1);
         for (int i = 0; i < data1.length; i++) {
             System.out.println(data1[i]);
+        }
+        System.out.println();
+
+        selectionSort(data2);
+        for (int i = 0; i < data2.length ; i++) {
+            System.out.println(data2[i]);
         }
     }
 
@@ -70,13 +76,34 @@ public class Main {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 1; j < array.length - i; j++) {
                 if (array[j - 1] > array[j]) {
-                    swap(array, j, j - 1);
+                    swapBubbleSort(array, j, j - 1);
                 }
             }
         }
     }
 
-    private static void swap(int[] array, int a, int b) {
+    private static void swapBubbleSort(int[] array, int a, int b) {
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
+    }
+
+    public static void selectionSort(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int currentMinIndex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] > array[currentMinIndex]) {
+                    currentMinIndex = j;
+                }
+            }
+            if (currentMinIndex != i) {
+                swapSelectionSort(array, i ,currentMinIndex);
+            }
+
+        }
+
+    }
+    public static void swapSelectionSort(int[] array, int a, int b) {
         int temp = array[a];
         array[a] = array[b];
         array[b] = temp;
