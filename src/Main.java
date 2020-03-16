@@ -5,24 +5,32 @@ public class Main {
     static int[] data4 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     public static void main(String[] args) {
+        //opg A
         find(10);
+
+        //opg B
         findAlle(5);
+
+        //opg C
         findMax();
         System.out.println();
 
-        //Implementering af bubblesort
+        //Brug af bubblesort
         bubbleSort(data1);
         for (int i = 0; i < data1.length; i++) {
             System.out.println(data1[i]);
         }
         System.out.println();
 
+        //Brug af selectionsort
         selectionSort(data2);
         for (int i = 0; i < data2.length ; i++) {
             System.out.println(data2[i]);
         }
     }
 
+
+    //Metode til opg a
     public static boolean find(int x) {
         boolean found = false;
         for (int i = 0; i < data1.length ; i++) {
@@ -34,6 +42,7 @@ public class Main {
         return found;
     }
 
+    //Metode til opg b
     public static int findAlle(int x) {
         int antal = 0;
         for (int i = 0; i < data2.length ; i++) {
@@ -45,6 +54,8 @@ public class Main {
         return antal;
     }
 
+
+    //Metode til opg c
     public static void findMax() {
         int max = data3[0];
         for (int i = 0; i < data3.length; i++) {
@@ -72,6 +83,8 @@ public class Main {
         }
 
     }*/
+
+    //Selection opgaver
     public static void bubbleSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 1; j < array.length - i; j++) {
