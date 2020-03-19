@@ -66,23 +66,6 @@ public class Main {
         System.out.println(max);
     }
 
-    /*public static void binarySearch(int first, int last, int key) {
-        int mid = ((data4.length - 1)) / 2;
-        while (first <= last) {
-            if (data4[mid] < key) {
-                first = mid + 1;
-            } else if (data4[mid] == key) {
-                System.out.println("Element is found at index " + mid);
-                break;
-            } else {
-                last = mid - 1;
-            }
-            if (first > last) {
-                System.out.println("Element is not found");
-            }
-        }
-
-    }*/
 
     //Selection opgaver
     public static void bubbleSort(int[] array) {
