@@ -17,15 +17,17 @@ public class Main {
 
         //Brug af bubblesort
         bubbleSort(data1);
+        System.out.print("data1 array: ");
         for (int i = 0; i < data1.length; i++) {
-            System.out.println(data1[i]);
+            System.out.print(data1[i] + " ");
         }
         System.out.println();
 
         //Brug af selectionsort
         selectionSort(data2);
+        System.out.print("data2 array: ");
         for (int i = 0; i < data2.length ; i++) {
-            System.out.println(data2[i]);
+            System.out.print(data2[i] + " ");
         }
     }
 
@@ -69,6 +71,7 @@ public class Main {
 
     //Selection opgaver
     public static void bubbleSort(int[] array) {
+        Timer.start();
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 1; j < array.length - i; j++) {
                 if (array[j - 1] > array[j]) {
@@ -76,6 +79,9 @@ public class Main {
                 }
             }
         }
+        Timer.stop();
+        Timer.elapsedTime();
+
     }
 
     private static void swapBubbleSort(int[] array, int a, int b) {
@@ -85,6 +91,7 @@ public class Main {
     }
 
     public static void selectionSort(int[] array) {
+        Timer.start();
         for (int i = 0; i < array.length - 1; i++) {
             int currentMinIndex = i;
             for (int j = i + 1; j < array.length; j++) {
@@ -97,6 +104,8 @@ public class Main {
             }
 
         }
+        Timer.stop();
+        Timer.elapsedTime();
 
     }
     public static void swapSelectionSort(int[] array, int a, int b) {

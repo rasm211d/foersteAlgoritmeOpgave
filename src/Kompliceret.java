@@ -2,7 +2,7 @@ public class Kompliceret {
     public static void main(String[] args) {
         Timer.start();
 
-        int n = 100;
+        int n = 30;
 
         long resultat = 0;
 
